@@ -1,0 +1,104 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  page:
+    type: page
+    label: Page
+    folder: _pages
+    match:
+      - about.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: boolean
+        name: comments
+        label: Comments
+  page_1:
+    type: page
+    label: Page 1
+    folder: _pages
+    match:
+      - categories.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+  page_2:
+    type: page
+    label: Page 2
+    folder: _pages
+    match:
+      - tags.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: string
+        name: image
+        label: Image
+      - type: string
+        name: description
+        label: Description
+      - type: boolean
+        name: featured
+        label: Featured
+      - type: boolean
+        name: hidden
+        label: Hidden
+      - type: number
+        name: rating
+        label: Rating
+        subtype: float
+      - type: string
+        name: beforetoc
+        label: Beforetoc
+      - type: boolean
+        name: toc
+        label: Toc
